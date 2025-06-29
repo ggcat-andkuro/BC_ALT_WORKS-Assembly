@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>BC_ALT_WORKS 組立説明書一覧</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>組立説明書一覧</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>BC_ALT_WORKS 組立説明書一覧</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>組立説明書一覧</h1>
 
-  <div class="product-list">
-    <!-- 商品1 -->
-    <div class="product-card">
-      <a href="manuals/MBlock2-Conv 2 For ALT_BODY.pdf" target="_blank">
-        <img src="images/img0.png" alt="商品1の画像">
-        <h2>MBlock2-Conv2 For ALT_BODY</h2>
-      </a>
-      <!-- <a class="buy-button" href="https://example.com/product1" target="_blank">購入ページへ</a> -->
-    </div>
+        <div class="product-list">
 
-    <!-- 商品2 -->
-    <div class="product-card">
-      <a href="manuals/BC_ALT_BODY.pdf" target="_blank">
-        <img src="images/img1.png" alt="商品2の画像">
-        <h2>BC_ALT_BODY<br>(胴体パーツ共通説明書)</h2>
-      </a>
-      <!-- <a class="buy-button" href="https://example.com/product2" target="_blank">購入ページへ</a> -->
-    </div>
-  </div>
-</body>
+            <!-- 商品1 -->
+            <div class="product-card">
+                <a href="manuals/MBlock2-Conv 2 For ALT_BODY.pdf" target="_blank">
+                    <img src="images/img0.png" alt="商品1の画像">
+                    <h2>MBlock2-Conv2 For ALT_BODY</h2>
+                </a>
+                <!-- 対応商品型 -->
+                <button class="toggle-button" onclick="toggleList(this)">対応キット表示</button>
+                <ul class="compat-list">
+                    <li>
+                        <a href="https://ggcat.booth.pm/items/6410726" target="_blank">
+                            <h4>BC_ALT_BODY PLAIN</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ggcat.booth.pm/items/6548147" target="_blank">
+                            <h4>BC_ALT_BODY NIPPLES</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 商品2 -->
+            <div class="product-card">
+                <a href="manuals/BC_ALT_BODY.pdf" target="_blank">
+                    <img src="images/img1.png" alt="商品2の画像">
+                    <h2>BC_ALT_BODY<br>(胴体パーツ共通説明書)</h2>
+                </a>
+                <!-- 対応商品型 -->
+                <button class="toggle-button" onclick="toggleList(this)">対応キット表示</button>
+                <ul class="compat-list">
+                    <li>
+                        <a href="https://ggcat.booth.pm/items/6410726" target="_blank">
+                            <h4>BC_ALT_BODY PLAIN</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ggcat.booth.pm/items/6548147" target="_blank">
+                            <h4>BC_ALT_BODY NIPPLES</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function toggleList(button) {
+            const list = button.nextElementSibling;
+            list.classList.toggle('open');
+            button.textContent = list.classList.contains('open') ? '対応キットを閉じる' : '対応キット表示';
+            }
+        </script>
+    </body>
 </html>
